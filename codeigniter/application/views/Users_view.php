@@ -56,7 +56,7 @@ window.location="<?php echo base_url();?>index.php/users/"+act+"/"+gotoid;
 
 				<td><?php echo $u_key->Email_Address; ?></td>
 
-				<td><?php echo $u_key->Home_Address; ?></td>
+				<td><?php echo $u_key->Hddress; ?></td>
 				
 				<td><?php echo $u_key->gender; ?></td>
 				

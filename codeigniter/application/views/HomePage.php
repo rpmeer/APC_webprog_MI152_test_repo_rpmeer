@@ -12,8 +12,9 @@
 	font-size: 18px;
 	font-weight: bold;
   position: absolute;
-  top: 500px;
-  
+  top: 650px;
+  left: 40px;
+
 }
 
 .error {
@@ -177,77 +178,64 @@
 
 
 <div id="form">
-<?php	
-// define variables and set to empty values
-$full_nameErr = $emailErr = $genderErr = $nicknameErr = "";
-$full_name = $email = $gender = $comment = $nickname = $home_address = $cellphone = "";
+  <?php
+    // define variables and set to empty values
+    $nameErr = $emailErr = $genderErr = $nicknameErr = $cellnoErr = "";
+    $name = $email = $gender = $comment = $address = $cellno = $nickname = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["full_name"])) {
-    $full_nameErr = "Full Name is required";
-  } else {
-    $full_name = test_input($_POST["full_name"]);
-    // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-      $nameErr = "Only letters and white space allowed"; 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      if (empty($_POST["name"])) {
+        $nameErr = "Name is required";
+      } else {
+        $name = test_input($_POST["name"]);
+      }
+      
+      if (empty($_POST["email"])) {
+        $emailErr = "Email is required";
+      } else {
+        $email = test_input($_POST["email"]);
+      }
+
+      if (empty($_POST["cellno"])) {
+        $cellnoErr = "Cellphone Number is required";
+      } else {
+        $cellno = test_input($_POST["cellno"]);
+      }
+      
+
+      if (empty($_POST["nickname"])) {
+        $nicknameErr = "Nickname is required";
+      } else {
+        $nickname = test_input($_POST["nickname"]);
+      }
+
+              
+      if (empty($_POST["address"])) {
+        $address = "";
+      } else {
+        $address = test_input($_POST["address"]);
+      }
+
+      if (empty($_POST["comment"])) {
+        $comment = "";
+      } else {
+        $comment = test_input($_POST["comment"]);
+      }
+
+      if (empty($_POST["gender"])) {
+        $genderErr = "Gender is required";
+      } else {
+        $gender = test_input($_POST["gender"]);
+      }
     }
-  }
-  
-  if (empty($_POST["home_address"])) {
-    $home_address = "";
-  } else {
-    $home_address = test_input($_POST["home_address"]);
-  }
-  
-  if (empty($_POST["cellphone"])){
-	  $cellphone = "";
-  } else {
-	  $cellphone = test_input($_POST["cellphone"]);
-  }
-  
-  if (empty($_POST["nickname"])) {
-	  $nicknameErr = "Nickname is required";
-  } else {
-	  $nickname = test_input($_POST["nickname"]);
-    // check if name only contains letters and whitespace
-    if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-      $nickErr = "Only letters and white space allowed"; 
+
+    function test_input($data) {
+      $data = trim($data);
+      $data = stripslashes($data);
+      $data = htmlspecialchars($data);
+      return $data;
     }
-  }
-  
-  
-  if (empty($_POST["email"])) {
-    $emailErr = "Email is required";
-  } else {
-    $email = test_input($_POST["email"]);
-    // check if e-mail address is well-formed
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $emailErr = "Invalid email format"; 
-    }
-  }
-  
-
-  if (empty($_POST["comment"])) {
-    $comment = "";
-  } else {
-    $comment = test_input($_POST["comment"]);
-  }
-
-  if (empty($_POST["gender"])) {
-    $genderErr = "Gender is required";
-  } else {
-    $gender = test_input($_POST["gender"]);
-  }
-  
-}
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-?>
+    ?>
 
 <h2>Fill Up the form</h2>
 <p><span class="error">* required field.</span></p>
@@ -276,7 +264,7 @@ function test_input($data) {
 </form>
 
 <?php
-echo "<h2>Results:</h2>";
+echo "<h2>Your Input:</h2>";
 echo $full_name;
 echo "<br>";
 echo $nickname;
@@ -294,6 +282,13 @@ echo "<br>";
 
 ?>
 </div>
+
+<!--second layer-->
+  <div style = "background-color: #1C140D; width: 1366px; height: 50px; position: absolute; top: 1500px; left: 0px;">
+            <div style="position: absolute; top: 10px; left:10px;color: white; font-size: 13px;"><i>Web Programming: Exercise 2</i></div>
+            <div style="position: absolute; top: 30px; left:600px;color: white; font-size: 13px;"><i>Copyright 2016. Reinan Meer.</i></div>
+  </div>
+
 </body>
 
 </html>

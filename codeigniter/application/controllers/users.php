@@ -1,62 +1,132 @@
 <?php
-if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class Users extends CI_Controller {
-function __construct()
+class Users extends CI_Controller
 {
-parent::__construct();
-#$this->load->helper('url');
-$this->load->model('users_model');
-}
-public function index(){
-	$this->load->view('HomePage');
-}
-public function users_view(){
-	$data['user_list'] = $this->users_model->get_all_users();
-	$this->load->view('Users_view',$data);
-	
-}
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->helper(array('form','url'));
+        $this->load->library(array('session', 'form_validation'));
+        $this->load->database();
+        $this->load->model('User_model');
+    }
+
+    function index()
+    {
+        // set form validation rules
+        $this->form_validation->set_rules('fullname', 'Full Name', 'required');
+        $this->form_validation->set_rules('nickname', 'Nickname', 'required');
+        $this->form_validation->set_rules('email', 'Email Address', 'trim|required|valid_email');
+        $this->form_validation->set_rules('address', 'Address', 'required');
+        $this->form_validation->set_rules('gender', 'Gender', 'required');
+        $this->form_validation->set_rules('phoneNum', 'Phone No.', 'required');
+        $this->form_validation->set_rules('comment', 'Comment');
+
+        // submit
+        if ($this->form_validation->run() == FALSE)
+        {
+            // fails
+            $this->load->view('create_user_view');
+        }
+        else
+        {
+            //insert user details into db
+            $data_users = array(
+                'fullname' => $this->input->post('fullname'),
+                'nickname' => $this->input->post('nickname'),
+                'email' => $this->input->post('email'),
+                'address' => $this->input->post('address'),
+                'gender' => $this->input->post('gender'),
+                'phoneNum' => $this->input->post('phoneNum'),
+                'comment' => $this->input->post('comment')
 
 
-public function add_form()
-{
-$this->load->view('Users_add');
+            );
+
+            if ($this->User_model->insert_user($data_users))
+            {
+                redirect('home', $data);
+            }
+            else
+            {
+                // error
+                $this->session->set_flashdata('msg','Oops! Error.  Please try again later!!!');
+                redirect('Users/index');
+            }
+        }
+    }
+
+    function edit($user_id)
+    {
+        $this->form_validation->set_rules('fullname', 'Full Name', 'required');
+        $this->form_validation->set_rules('nickname', 'Nickname', 'required');
+        $this->form_validation->set_rules('email', 'Email Address', 'trim|required|valid_email');
+        $this->form_validation->set_rules('address', 'Address', 'required');
+        $this->form_validation->set_rules('gender', 'Gender', 'required');
+        $this->form_validation->set_rules('phoneNum', 'Phone No.', 'required');
+        $this->form_validation->set_rules('comment', 'Comment');
+
+
+        // submit
+        if ($this->form_validation->run() == FALSE)
+        {
+            $data['user'] = $this->User_model->find($user_id);
+            $this->load->view('update_user_view',$data);
+        }
+        else
+        {
+            if($_FILES['userfile']['name'] != '')
+            {
+                //insert user details into db
+                $data_users = array(
+                'fullname' => $this->input->post('fullname'),
+                'nickname' => $this->input->post('nickname'),
+                'email' => $this->input->post('email'),
+                'address' => $this->input->post('address'),
+                'gender' => $this->input->post('gender'),
+                'phoneNum' => $this->input->post('phoneNum'),
+                'comment' => $this->input->post('comment')
+                );
+
+                if ($this->User_model->edit($id, $data_users))
+                {
+                    redirect('home', $data);
+                }
+                else
+                {
+                    // error
+                    $this->session->set_flashdata('msg','Oops! Error.  Please try again later!!!');
+                    redirect('Users/index');
+                }
+            } else {
+                //insert user details into db
+                $data_users = array(
+                'fullname' => $this->input->post('fullname'),
+                'nickname' => $this->input->post('nickname'),
+                'email' => $this->input->post('email'),
+                'address' => $this->input->post('address'),
+                'gender' => $this->input->post('gender'),
+                'phoneNum' => $this->input->post('phoneNum'),
+                'comment' => $this->input->post('comment')
+                );
+
+                if ($this->User_model->edit($user_id, $data_users))
+                {
+                    redirect('home', $data);
+                }
+                else
+                {
+                    // error
+                    $this->session->set_flashdata('msg','Oops! Error.  Please try again later!!!');
+                    redirect('Users/index');
+                }
+            }
+        
+        }
+    }
+    function delete($user_id)
+    {
+        $this->User_model->delete($user_id);
+        redirect('home');
+    }
 }
-public function insert_users_db()
-{
-$udata['complete_name'] = $this->input->post('complete_name');
-$udata['nickname'] = $this->input->post('nickname');
-$udata['Email_Address'] = $this->input->post('Email_Address');
-$udata['Home_Address'] = $this->input->post('Home_Address');
-$udata['gender'] = $this->input->post('gender');
-$udata['cellphone'] = $this->input->post('cellphone');
-$udata['comment'] = $this->input->post('comment');
-$res = $this->users_model->insert_users_to_db($udata);
-if($res){
-header('location:'.base_url()."index.php/users/users_view");
-}
-}
-public function Users_edit(){
-$user_id = $this->uri->segment(3);
- $data['users'] = $this->users_model->getById($user_id);
-$this->load->view('Users_edit', $data);
-}
-public function update()
-{
-$mdata['complete_name']=$_POST['complete_name'];
-$mdata['nickname']=$_POST['nickname'];
-$mdata['Email_Address']=$_POST['Email_Address'];
-$mdata['Home_Address']=$_POST['Home_Address'];
-$mdata['gender']=$_POST['gender'];
-$mdata['cellphone']=$_POST['cellphone'];
-$mdata['comment']=$_POST['comment'];
-$res=$this->users_model->update_info($mdata, $_POST['user_id']);
-if($res){
-header('location:'.base_url()."index.php/users/users_view");
-}
-}
-public function delete($user_id)
-{
-$this->users_model->delete_a_user($user_id);
-$this->users_view();
-}
-}
+?>

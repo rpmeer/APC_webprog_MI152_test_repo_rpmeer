@@ -120,7 +120,7 @@
     <!--Relationship-->
     <div style="background-color: #CBE86B; width:400px; height: 85px; position: absolute; top: 455px; left: 400px; border-radius: 10px; opacity: 0.5">
           <div>
-                <img src="a<?php echo base_url('assets/relationship.png');?>" style="width: 20px; height: 20px; position: absolute; top: 20px; left: 20px;">
+                <img src="<?php echo base_url('assets/relationship.png');?>" style="width: 20px; height: 20px; position: absolute; top: 20px; left: 20px;">
           </div>
           <div style="font-size: 15px; color: black;  position: absolute; left: 60px;top: 20px;">
                 Single
@@ -286,7 +286,7 @@
 ?>
 </div>
 
- <div style="position: absolute; top: 650; left: 500px;">
+ <div style="position: absolute; top: 650; left: 600px;">
                     <table border="2">
                         <tr>
                             <th>Full Name</th>

@@ -22,10 +22,23 @@
   </div>
 
   <div style="position: absolute; top: 30px; left: 300px; font-size: 30px;"><b>Trivia Questions</b></div>
+
   <form>
   <div style="position: absolute; top: 80px; left: 300px; font-size: 20px;">#1: What is my favorite study place?</div>
-  <input type="button" class="button button1" onclick="info1()" value="Answer"/>
-  <p id=answer1 style="position: absolute; top: 120px; left: 350px; font-size: 16px;"></p>
+  <input type="button" class="button button1" onclick="info1()" value="Answer" style="position: absolute;top: 120px;left: 320px"/>
+  <p id=answer1 style="position: absolute; top: 120px; left: 400px; font-size: 16px;"></p>
+  </form>
+
+  <form>
+  <div style="position: absolute; top: 170px; left: 300px; font-size: 20px;">#2: What is my favorite italian dish?</div>
+  <input  type="button" class="button button1" onclick="info2()" value="Answer" style="position: absolute;top: 210px;left: 320px"/>
+  <p id=answer2 style="position: absolute; top: 210px; left: 400px; font-size: 16px;"></p>
+  </form>
+
+  <form>
+  <div style="position: absolute; top: 170px; left: 300px; font-size: 20px;">#3: What books I'm interested at?</div>
+  <input  type="button" class="button button1" onclick="info2()" value="Answer" style="position: absolute;top: 210px;left: 320px"/>
+  <p id=answer2 style="position: absolute; top: 210px; left: 400px; font-size: 16px;"></p>
   </form>
 
   
@@ -53,6 +66,12 @@
   function  info1(){
   var answer1 = "I love visiting different coffee shops and have a sip of their mouthwatering coffee";
   document.getElementById("answer1").innerHTML = answer1;
+  
+  }
+
+  function  info2(){
+  var answer2 = "Puttanesca and pesto";
+  document.getElementById("answer2").innerHTML = answer2;
   
   }
 

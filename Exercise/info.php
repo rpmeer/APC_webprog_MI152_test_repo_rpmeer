@@ -13,7 +13,7 @@
   
   <a href="HomePage.html" style="position: absolute; top: 120px; left: 50px;"><img src="house.png" style="height: 40px; width: 40px; position: absolute; top: -40px; left: 15px;">Home</a>
   <a href="About.html" style="position: absolute; top: 250px; left: 50px;"><img src="me.png" style="height: 40px; width: 40px; position: absolute; top: -40px; left: 15px;">About</a>
-  <a href="information.php" style="position: absolute; top: 380px; left: 25px;"><img src="info.png" style="height: 40px; width: 40px; position: absolute; top: -40px; left: 40px;">Information</a>
+  <a href="info.php" style="position: absolute; top: 380px; left: 25px;"><img src="info.png" style="height: 40px; width: 40px; position: absolute; top: -40px; left: 40px;">Information</a>
 </div>
 
 <!--first layer-->
@@ -27,49 +27,49 @@
     $nameErr = $emailErr = $genderErr = $nicknameErr = $cellnoErr = "";
     $name = $email = $gender = $comment = $address = $cellno = $nickname = "";
 
-    if ($_SERVER["REQUEST_METHOD"] == "GET") {
-      if (empty($_GET["name"])) {
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      if (empty($_POST["name"])) {
         $nameErr = "Name is required";
       } else {
-        $name = test_input($_GET["name"]);
+        $name = test_input($_POST["name"]);
       }
       
-      if (empty($_GET["email"])) {
+      if (empty($_POST["email"])) {
         $emailErr = "Email is required";
       } else {
-        $email = test_input($_GET["email"]);
+        $email = test_input($_POST["email"]);
       }
 
-      if (empty($_GET["cellno"])) {
+      if (empty($_POST["cellno"])) {
         $cellnoErr = "Cellphone Number is required";
       } else {
-        $cellno = test_input($_GET["cellno"]);
+        $cellno = test_input($_POST["cellno"]);
       }
       
 
-      if (empty($_GET["nickname"])) {
+      if (empty($_POST["nickname"])) {
         $nicknameErr = "Nickname is required";
       } else {
-        $nickname = test_input($_GET["nickname"]);
+        $nickname = test_input($_POST["nickname"]);
       }
 
               
-      if (empty($_GET["address"])) {
+      if (empty($_POST["address"])) {
         $address = "";
       } else {
-        $address = test_input($_GET["address"]);
+        $address = test_input($_POST["address"]);
       }
 
-      if (empty($_GET["comment"])) {
+      if (empty($_POST["comment"])) {
         $comment = "";
       } else {
-        $comment = test_input($_GET["comment"]);
+        $comment = test_input($_POST["comment"]);
       }
 
-      if (empty($_GET["gender"])) {
+      if (empty($_POST["gender"])) {
         $genderErr = "Gender is required";
       } else {
-        $gender = test_input($_GET["gender"]);
+        $gender = test_input($_POST["gender"]);
       }
     }
 
@@ -82,7 +82,7 @@
     ?>
 
 
-    <form method="GET" style="position: absolute; top: 10px; left: 300px;" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <form method="POST" style="position: absolute; top: 10px; left: 300px;" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
       <p style="font-size: 30px;"><b>Personal Information</b></p>
       

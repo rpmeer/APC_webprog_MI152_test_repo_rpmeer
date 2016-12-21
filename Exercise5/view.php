@@ -40,23 +40,23 @@ mysql_close($conn);
 <table>
 	<tr>
 		<td>First Name:</td>
-		<td><input type="text" name="fname" class="form-control"/></td>
+		<td><input type="text" name="fname" value="<?php echo $fname ?>"/></td>
 	</tr>
 	<tr>
-		<td>Last Name</td>
-		<td><input type="text" name="lname" class="form-control"/></td>
+		<td>Last Name:</td>
+		<td><input type="text" name="lname" value="<?php echo $lname ?>"/></td>
 	</tr>
 	<tr>
 		<td>E-mail</td>
-		<td><input type="text" name="email" class="form-control"/></td>
+		<td><input type="text" name="email" value="<?php echo $email ?>"/></td>
 	</tr>
 	<tr>
-		<td>Contact Number</td>
-		<td><input type="text" name="contact" class="form-control"/></td>
+		<td>Contact</td>
+		<td><input type="text" name="contact" value="<?php echo $contact ?>"/></td>
 	</tr>
 	<tr>
 		<td>&nbsp;</td>
-		<td><input type="submit" name="submit" value="add" class="btn btn-success btn-lg"/></td>
+		<td><input type="submit" name="save" value="save" /></td>
 	</tr>
 </table>
 

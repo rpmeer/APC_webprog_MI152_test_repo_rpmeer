@@ -64,7 +64,7 @@ if (isset($_POST['submit']))
 				echo"<td><font color='black'>" .$test['fname']."</font></td>";
 				echo"<td><font color='black'>". $test['lname']. "</font></td>";
 				echo"<td><font color='black'>". $test['email']. "</font></td>";
-				echo"<td><font color='black'>". $test['contatc']. "</font></td>";	
+				echo"<td><font color='black'>". $test['contact']. "</font></td>";	
 				echo"<td> <a href ='view.php?id=$id'>Edit</a>";
 				echo"<td> <a href ='del.php?id=$id'><center>Delete</center></a>";
 									

@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title></title>
+<link rel="stylesheet" type="text/css" href="style.css" />
 
 </head>
 
@@ -22,7 +23,7 @@
   </div>
 
 	<form method="post">
-	<table>
+	<table style="position: absolute;top: 40px; left: 500px">
 
 		<tr>
 			<td>First Name:</td>
@@ -62,7 +63,7 @@
 		        }
 	?>
 	</form>
-	<table border="1">
+	<table border="1" style="border-color: #CBE86B; position: absolute;top: 200px; left: 400px;">
 		
 				<?php
 				include("db.php");
@@ -74,7 +75,6 @@
 				{
 					$id = $test['id'];	
 					echo "<tr align='center'>";	
-					echo"<td><font color='black'>" .$test['id']."</font></td>";
 					echo"<td><font color='black'>" .$test['fname']."</font></td>";
 					echo"<td><font color='black'>". $test['lname']. "</font></td>";
 					echo"<td><font color='black'>". $test['email']. "</font></td>";
@@ -92,7 +92,20 @@
 	<div style = "background-color: #1C140D; width: 1366px; height: 50px; position: absolute; top: 612px; left: 0px;">
             <div style="position: absolute; top: 10px; left:10px;color: white; font-size: 13px;"><i>Web Programming: Exercise 2</i></div>
             <div style="position: absolute; top: 30px; left:600px;color: white; font-size: 13px;"><i>Copyright 2016. Reinan Meer.</i>
-    </div>
-</div>
+   			 </div>
+   	</div>
+
+    <script>
+		  function openNav() {
+		      document.getElementById("mySidenav").style.width = "190px";
+		      document.getElementById("main").style.marginLeft = "190px";
+		  }
+
+		  function closeNav() {
+		      document.getElementById("mySidenav").style.width = "0";
+		      document.getElementById("main").style.marginLeft= "0";
+		  }
+	</script>
+
 </body>
 </html>

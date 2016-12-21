@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-</head>
-<body>
-	<form action="mycontact.php" method="post">
-		Name: <input type="text" name="name"><br>
-		E-mail: <input type="text" name="email"><br>
-		<input type="submit">
-	</form>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 
+</head>
+<body id="main">
+
+<!--nav-->
+<div id="mySidenav" class="sidenav">
+  <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+  
+  <a href="HomePage.html" style="position: absolute; top: 120px; left: 50px;"><img src="house.png" style="height: 40px; width: 40px; position: absolute; top: -40px; left: 15px;">Home</a>
+  <a href="About.html" style="position: absolute; top: 250px; left: 50px;"><img src="me.png" style="height: 40px; width: 40px; position: absolute; top: -40px; left: 15px;">About</a>
+  <a href="information.html" style="position: absolute; top: 380px; left: 25px;"><img src="info.png" style="height: 40px; width: 40px; position: absolute; top: -40px; left: 40px;">Information</a>
+</div>
+
+<!--first layer-->
+<div style = "background-color: #F2E9E1; width: 1365px; height: 585px; margin: 0px; position: absolute; top: 0px; left: 0px;">
+  <div id="main">
+     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+  </div>
+</div>
+
+ <!--second layer-->
+<div style = "background-color: #1C140D; width: 1366px; height: 50px; position: absolute; top: 585px; left: 0px;">
+            <div style="position: absolute; top: 10px; left:10px;color: white; font-size: 13px;"><i>Web Programming: Exercise 2</i></div>
+            <div style="position: absolute; top: 30px; left:600px;color: white; font-size: 13px;"><i>Copyright 2016. Reinan Meer.</i></div>
+</div>
+
+        
+<script>
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "190px";
+      document.getElementById("main").style.marginLeft = "190px";
+  }
+
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+  }
+
+  
+</script>
+     
 </body>
-</html>
+</html> 

@@ -119,10 +119,8 @@
     <?php
     
     echo "<h4>Your Input:</h4>";
-    echo "<p><i>Name:</i></p>";
     echo $name;
-    echo "<p><i>Nickname:</i></p>";
-
+    echo "<br>";
     echo $nickname;
     echo "<br>";
     echo $email;

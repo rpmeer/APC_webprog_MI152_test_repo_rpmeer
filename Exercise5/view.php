@@ -1,27 +1,27 @@
 <?php
 require("db.php");
-$id =$_REQUEST['BookID'];
+$id =$_REQUEST['id'];
 
-$result = mysql_query("SELECT * FROM example WHERE BookID  = '$id'");
+$result = mysql_query("SELECT * FROM example WHERE id  = '$id'");
 $test = mysql_fetch_array($result);
 if (!$result) 
 		{
 		die("Error: Data not found..");
 		}
-				$Title=$test['Title'] ;
-				$Author= $test['Author'] ;					
-				$PublisherName=$test['PublisherName'] ;
-				$CopyrightYear=$test['CopyrightYear'] ;
+				$fname=$test['fname'] ;
+				$lname= $test['lname'] ;					
+				$email=$test['email'] ;
+				$contact=$test['contact'] ;
 
 if(isset($_POST['save']))
 {	
-	$title_save = $_POST['title'];
-	$author_save = $_POST['author'];
-	$name_save = $_POST['name'];
-	$copy_save = $_POST['copy'];
+	$fname_save = $_POST['fname'];
+	$lname_save = $_POST['lname'];
+	$email_save = $_POST['email'];
+	$contact_save = $_POST['contact'];
 
-	mysql_query("UPDATE example SET Title ='$title_save', Author ='$author_save',
-		 PublisherName ='$name_save',CopyrightYear ='$copy_save' WHERE BookID = '$id'")
+	mysql_query("UPDATE example SET fname ='$fname_save', lname ='$lname_save',
+		email='$email_save',contact ='$contact_save' WHERE id = '$id'")
 				or die(mysql_error()); 
 	echo "Saved!";
 	
@@ -39,24 +39,24 @@ mysql_close($conn);
 <form method="post">
 <table>
 	<tr>
-		<td>Title:</td>
-		<td><input type="text" name="title" value="<?php echo $Title ?>"/></td>
+		<td>First Name:</td>
+		<td><input type="text" name="fname" class="form-control"/></td>
 	</tr>
 	<tr>
-		<td>Author</td>
-		<td><input type="text" name="author" value="<?php echo $Author ?>"/></td>
+		<td>Last Name</td>
+		<td><input type="text" name="lname" class="form-control"/></td>
 	</tr>
 	<tr>
-		<td>Publisher Name</td>
-		<td><input type="text" name="name" value="<?php echo $PublisherName ?>"/></td>
+		<td>E-mail</td>
+		<td><input type="text" name="email" class="form-control"/></td>
 	</tr>
 	<tr>
-		<td>Copyright Year</td>
-		<td><input type="text" name="copy" value="<?php echo $CopyrightYear ?>"/></td>
+		<td>Contact Number</td>
+		<td><input type="text" name="contact" class="form-control"/></td>
 	</tr>
 	<tr>
 		<td>&nbsp;</td>
-		<td><input type="submit" name="save" value="save" /></td>
+		<td><input type="submit" name="submit" value="add" class="btn btn-success btn-lg"/></td>
 	</tr>
 </table>
 

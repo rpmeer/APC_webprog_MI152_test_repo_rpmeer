@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+<body id="main">
+
+<!--nav-->
+<div id="mySidenav" class="sidenav">
+  <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+  
+  <a href="HomePage.html" style="position: absolute; top: 120px; left: 50px;"><img src="house.png" style="height: 40px; width: 40px; position: absolute; top: -40px; left: 15px;">Home</a>
+  <a href="About.html" style="position: absolute; top: 250px; left: 50px;"><img src="me.png" style="height: 40px; width: 40px; position: absolute; top: -40px; left: 15px;">About</a>
+  <a href="information.html" style="position: absolute; top: 380px; left: 25px;"><img src="info.png" style="height: 40px; width: 40px; position: absolute; top: -40px; left: 40px;">Information</a>
+</div>
+
+<!--first layer-->
+<div style = "background-color: #F2E9E1; width: 1365px; height: 585px; margin: 0px; position: absolute; top: 0px; left: 0px;">
+  <div id="main">
+     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+  </div>
+
+    <?php
+    // define variables and set to empty values
+    $nameErr = $emailErr = $genderErr = $websiteErr = "";
+    $name = $email = $gender = $comment = $website = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      if (empty($_POST["name"])) {
+        $nameErr = "Name is required";
+      } else {
+        $name = test_input($_POST["name"]);
+      }
+      
+      if (empty($_POST["email"])) {
+        $emailErr = "Email is required";
+      } else {
+        $email = test_input($_POST["email"]);
+      }
+        
+      if (empty($_POST["website"])) {
+        $website = "";
+      } else {
+        $website = test_input($_POST["website"]);
+      }
+
+      if (empty($_POST["comment"])) {
+        $comment = "";
+      } else {
+        $comment = test_input($_POST["comment"]);
+      }
+
+      if (empty($_POST["gender"])) {
+        $genderErr = "Gender is required";
+      } else {
+        $gender = test_input($_POST["gender"]);
+      }
+    }
+
+    function test_input($data) {
+      $data = trim($data);
+      $data = stripslashes($data);
+      $data = htmlspecialchars($data);
+      return $data;
+    }
+    ?>
+
+
+    <form method="post" style="position: absolute; top: 10px; left: 300px;" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+
+      <p style="font-size: 30px;"><b>Personal Information</b></p>
+
+      Name: <input type="text" name="name">
+      <span class="error">* <?php echo $nameErr;?></span>
+      <br><br>
+      Nickname: <input type="text" name="nickname">
+      <span class="error">* <?php echo $nicknameErr;?></span>
+      <br><br>
+      E-mail:
+      <input type="text" name="email">
+      <span class="error">* <?php echo $emailErr;?></span>
+      <br><br>
+      Home Address:
+      <input type="text" name="address">
+      <span class="error"><?php echo $addressErr;?></span>
+      <br><br>
+      Gender:
+      <input type="radio" name="gender" value="female">Female
+      <input type="radio" name="gender" value="male">Male
+      <span class="error">* <?php echo $genderErr;?></span>
+      <br><br>
+      Cellphone Number:
+      <input type="text" name="cellno">
+      <span class="error"><?php echo $cellnoErr;?></span>
+      <br><br>
+      Comment: <textarea name="comment" rows="5" cols="40"></textarea>
+      <br><br>
+      
+      <input type="submit" name="submit" value="Submit">
+
+    </form> 
+
+    <div style="position: absolute;top: 300px; left: 200px;">
+
+    <?php
+    
+    echo "<h2>Your Input:</h2>";
+    echo $name;
+    echo "<br>";
+    echo $email;
+    echo "<br>";
+    echo $website;
+    echo "<br>";
+    echo $comment;
+    echo "<br>";
+    echo $gender;
+    
+    ?>
+
+    </div>
+</div>
+
+ <!--second layer-->
+<div style = "background-color: #1C140D; width: 1366px; height: 50px; position: absolute; top: 585px; left: 0px;">
+            <div style="position: absolute; top: 10px; left:10px;color: white; font-size: 13px;"><i>Web Programming: Exercise 2</i></div>
+            <div style="position: absolute; top: 30px; left:600px;color: white; font-size: 13px;"><i>Copyright 2016. Reinan Meer.</i></div>
+</div>
+
+        
+<script>
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "190px";
+      document.getElementById("main").style.marginLeft = "190px";
+  }
+
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+  }
+
+  
+</script>
+     
+</body>
+</html> 

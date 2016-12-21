@@ -24,7 +24,7 @@ if($this->input->post('is_submitted'))
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Marc Nares</title>
+	<title></title>
 </head>
 <body style="background-color: #F2E9E1; position: absolute; top: 40px; left: 550px;">
 <h2>Personal Information</h2>

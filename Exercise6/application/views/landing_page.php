@@ -157,7 +157,7 @@
           <div style=" position: absolute; top: 10px; left: 10px;"><img src="<?php echo base_url('assets/web.png');?>" style="width: 50px; height: 50px;"></div>
           <div style="position: absolute; top: 20px;left: 70px; font-size: 18px;"><b>Websites</b></div>
 
-          <div style=" position: absolute; top: 70px; left: 60px;"><a href="https://www.facebook.com"><img src="a<?php echo base_url('assets/facebook.png');?>" style="width: 90px; height: 90px;"></a></div>
+          <div style=" position: absolute; top: 70px; left: 60px;"><a href="https://www.facebook.com"><img src="<?php echo base_url('assets/facebook.png');?>" style="width: 90px; height: 90px;"></a></div>
           <div style=" position: absolute; top: 160px; left: 65px; font-size: 18px;  color: black;">Facebook</div>
 
           <div style=" position: absolute; top: 70px; left: 200px;"><a href="https://www.twitter.com"><img src="<?php echo base_url('assets/twitter.png');?>" style="width: 90px; height: 90px;"></a></div>
@@ -177,116 +177,9 @@
 
 
 
-<div id="form">
-  <?php
-    // define variables and set to empty values
-    $nameErr = $emailErr = $genderErr = $nicknameErr = $cellnoErr = "";
-    $name = $email = $gender = $comment = $address = $cellno = $nickname = "";
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-      if (empty($_POST["name"])) {
-        $nameErr = "Name is required";
-      } else {
-        $name = test_input($_POST["name"]);
-      }
-      
-      if (empty($_POST["email"])) {
-        $emailErr = "Email is required";
-      } else {
-        $email = test_input($_POST["email"]);
-      }
 
-      if (empty($_POST["cellno"])) {
-        $cellnoErr = "Cellphone Number is required";
-      } else {
-        $cellno = test_input($_POST["cellno"]);
-      }
-      
-
-      if (empty($_POST["nickname"])) {
-        $nicknameErr = "Nickname is required";
-      } else {
-        $nickname = test_input($_POST["nickname"]);
-      }
-
-              
-      if (empty($_POST["address"])) {
-        $address = "";
-      } else {
-        $address = test_input($_POST["address"]);
-      }
-
-      if (empty($_POST["comment"])) {
-        $comment = "";
-      } else {
-        $comment = test_input($_POST["comment"]);
-      }
-
-      if (empty($_POST["gender"])) {
-        $genderErr = "Gender is required";
-      } else {
-        $gender = test_input($_POST["gender"]);
-      }
-    }
-
-    function test_input($data) {
-      $data = trim($data);
-      $data = stripslashes($data);
-      $data = htmlspecialchars($data);
-      return $data;
-    }
-    ?>
-<form>
-    <p style="font-size: 30px;"><b>Personal Information</b></p>
-      
-      Name: <input type="text" name="name">
-      <span class="error">* <?php echo $nameErr;?></span>
-      <br><br>
-      Nickname: <input type="text" name="nickname">
-      <span class="error">* <?php echo $nicknameErr;?></span>
-      <br><br>
-      E-mail:
-      <input type="text" name="email">
-      <span class="error">* <?php echo $emailErr;?></span>
-      <br><br>
-      Home Address:
-      <input type="text" name="address">
-      <br><br>
-      Gender:
-      <input type="radio" name="gender" value="female">Female
-      <input type="radio" name="gender" value="male">Male
-      <span class="error">* <?php echo $genderErr;?></span>
-      <br><br>
-      Cellphone Number: <input type="text" name="cellno">
-      <span class="error">* <?php echo $cellnoErr;?></span>
-      <br><br>
-      Comment: <textarea name="comment" rows="5" cols="40"></textarea>
-      <br><br>
-      
-      <input type="submit" name="submit" value="Submit">
-</form>
-
-<?php
-    echo "<h4>Your Input:</h4>";
-    echo $name;
-    echo "<br>";
-    echo $nickname;
-    echo "<br>";
-    echo $email;
-    echo "<br>";
-    echo $address;
-    echo "<br>";
-    echo $gender;
-    echo "<br>";
-    echo $cellno;
-    echo "<br>";
-    echo $comment;
-    echo "<br>";
-
-?>
-</div>
-
- <div style="position: absolute; top: 650; left: 600px;">
+ <div style="position: absolute; top: 650; left: 330px;">
                     <table border="2">
                         <tr>
                             <th>Full Name</th>
@@ -320,7 +213,7 @@
                 </div>
 
 <!--second layer-->
-  <div style = "background-color: #1C140D; width: 1366px; height: 50px; position: absolute; top: 1800px; left: 0px;">
+  <div style = "background-color: #1C140D; width: 1366px; height: 50px; position: absolute; top: 1000px; left: 0px;">
             <div style="position: absolute; top: 10px; left:10px;color: white; font-size: 13px;"><i>Web Programming: Exercise 2</i></div>
             <div style="position: absolute; top: 30px; left:600px;color: white; font-size: 13px;"><i>Copyright 2016. Reinan Meer.</i></div>
   </div>

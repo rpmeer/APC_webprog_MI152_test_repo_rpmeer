@@ -26,7 +26,7 @@ if($this->input->post('is_submitted'))
 <head>
 	<title>Marc Nares</title>
 </head>
-<body>
+<body style="background-color: #F2E9E1; position: absolute; top: 40px; left: 550px;">
 <h2>Personal Information</h2>
 <?php echo validation_errors();?>
 <?php echo form_open('Users/edit/'.$user_id); ?>

@@ -24,8 +24,8 @@
 
     <?php
     // define variables and set to empty values
-    $nameErr = $emailErr = $genderErr = $websiteErr = "";
-    $name = $email = $gender = $comment = $website = "";
+    $nameErr = $emailErr = $genderErr = $nicknameErr = $cellnoErr = "";
+    $name = $email = $gender = $comment = $address = $cellno = $nickname = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if (empty($_POST["name"])) {
@@ -39,11 +39,23 @@
       } else {
         $email = test_input($_POST["email"]);
       }
-        
-      if (empty($_POST["website"])) {
-        $website = "";
+
+      if (empty($_POST["nickname"])) {
+        $nicknameErr = "Nickname is required";
       } else {
-        $website = test_input($_POST["website"]);
+        $nickname = test_input($_POST["nickname"]);
+      }
+
+      if (empty($_POST["cellno"])) {
+        $cellno = "Cellphone Number is required";
+      } else {
+        $cellno = test_input($_POST["cellno"]);
+      }
+        
+      if (empty($_POST["address"])) {
+        $address = "";
+      } else {
+        $address = test_input($_POST["address"]);
       }
 
       if (empty($_POST["comment"])) {
@@ -84,16 +96,14 @@
       <br><br>
       Home Address:
       <input type="text" name="address">
-      <span class="error"><?php echo $addressErr;?></span>
       <br><br>
       Gender:
       <input type="radio" name="gender" value="female">Female
       <input type="radio" name="gender" value="male">Male
       <span class="error">* <?php echo $genderErr;?></span>
       <br><br>
-      Cellphone Number:
-      <input type="text" name="cellno">
-      <span class="error"><?php echo $cellnoErr;?></span>
+      Cellphone Number: <input type="text" name="nickname">
+      <span class="error">* <?php echo $cellnoErr;?></span>
       <br><br>
       Comment: <textarea name="comment" rows="5" cols="40"></textarea>
       <br><br>
@@ -102,20 +112,26 @@
 
     </form> 
 
-    <div style="position: absolute;top: 300px; left: 200px;">
+    <div style="position: absolute;top: 50px; left: 900px;">
 
     <?php
     
-    echo "<h2>Your Input:</h2>";
+    echo "<h4>Your Input:</h4>";
     echo $name;
+    echo "<br>";
+    echo $nickname;
     echo "<br>";
     echo $email;
     echo "<br>";
-    echo $website;
+    echo $address;
+    echo "<br>";
+    echo $gender;
+    echo "<br>";
+    echo $cellno;
     echo "<br>";
     echo $comment;
     echo "<br>";
-    echo $gender;
+   
     
     ?>
 

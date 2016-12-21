@@ -28,7 +28,7 @@
    
     <!--Pic-->
     <div>
-        <img src="assets/reinan.jpg" style="width: 200px; height: 200px; border-radius: 100px; position: absolute; top: 25px; left: 115px; border-style: solid; border-width: 5px; border-radius: 100px; border-color: #CBE86B; ">
+        <img src="<?php echo base_url('assets/reinan.jpg');?>" style="width: 200px; height: 200px; border-radius: 100px; position: absolute; top: 25px; left: 115px; border-style: solid; border-width: 5px; border-radius: 100px; border-color: #CBE86B; ">
     </div>
 
     <!--About Me-->
@@ -40,20 +40,20 @@
                 <b><i>"Rein"</i></b>
           </div>
           <div>
-                <img src="assets/grad.png" style="width: 20px; height: 20px; position: absolute; top: 90px; left: 20px;">
+                <img src="<?php echo base_url('assets/grad.png');?>" style="width: 20px; height: 20px; position: absolute; top: 90px; left: 20px;">
           </div>
           <div style="font-size: 14px; color: black;  position: absolute; left: 45px;top: 90px;">
                 Studied Bachelor of Science in Information Tecnology at <i>Asia Pacific College</i>
           </div>
           <div>
-                <img src="assets/grad.png" style="width: 20px; height: 20px; position: absolute; top: 165px; left: 20px;">
+                <img src="<?php echo base_url('assets/grad.png');?>" style="width: 20px; height: 20px; position: absolute; top: 165px; left: 20px;">
           </div>
           <div style="font-size: 14px; color: black;  position: absolute; left: 45px;top: 165px;">
                 Went to <i>Paranaque National High School</i>
           </div>
           <div>
-                <img src="assets/grad.png" style="width: 20px; height: 20px; position: absolute; top: 220px; left: 20px;">
-          </div>assets/
+                <img src="<?php echo base_url('assets/grad.png');?>" style="width: 20px; height: 20px; position: absolute; top: 220px; left: 20px;">
+          </div>
           <div style="font-size: 14px; color: black;  position: absolute; left: 45px;top: 220px;">
                 Went to <i>Escuela De San Lorenzo Ruiz</i>
           </div>

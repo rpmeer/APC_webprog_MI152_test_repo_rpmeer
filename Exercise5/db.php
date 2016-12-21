@@ -4,7 +4,7 @@
     {
 	 die('Could not connect: ' . mysql_error());
 	}
-	mysql_select_db("jobs", $conn);
+	mysql_select_db("user", $conn);
 ?>
 
  

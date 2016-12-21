@@ -25,7 +25,7 @@ class Users extends CI_Controller
         if ($this->form_validation->run() == FALSE)
         {
             // fails
-            $this->load->view('create_user_view');
+            $this->load->view('create_user_view', $data);
         }
         else
         {

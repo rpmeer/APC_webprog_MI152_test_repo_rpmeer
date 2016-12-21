@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Marc Nares</title>
 </head>
 <body>
 <h2>Personal Information</h2>

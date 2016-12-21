@@ -85,7 +85,7 @@
     <form method="GET" style="position: absolute; top: 10px; left: 300px;" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 
       <p style="font-size: 30px;"><b>Personal Information</b></p>
-      <p style="color: red;">* required field</p>
+      
       Name: <input type="text" name="name">
       <span class="error">* <?php echo $nameErr;?></span>
       <br><br>

@@ -149,13 +149,13 @@
         
 <script>
   function openNav() {
-      document.POSTElementById("mySidenav").style.width = "190px";
-      document.POSTElementById("main").style.marginLeft = "190px";
+      document.getElementById("mySidenav").style.width = "190px";
+      document.getElementById("main").style.marginLeft = "190px";
   }
 
   function closeNav() {
-      document.POSTElementById("mySidenav").style.width = "0";
-      document.POSTElementById("main").style.marginLeft= "0";
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
   }
 
   

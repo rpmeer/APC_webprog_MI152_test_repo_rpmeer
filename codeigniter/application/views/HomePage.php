@@ -237,54 +237,57 @@
     }
     ?>
 
-<h2>Fill Up the form</h2>
-<p><span class="error">* required field.</span></p>
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Complete Name: <input type="text" name="full_name" value="<?php echo $full_name;?>">
-  <span class="error">* <?php echo $full_nameErr;?></span>
-  <br><br>
-  Nickname: <input type="text" name="nickname" value="<?php echo $nickname;?>">
-  <span class="error">* <?php echo $nicknameErr;?></span>
-  <br><br>
-  Email Address: <input type="text" name="email" value="<?php echo $email;?>">
-  <span class="error"><?php echo $emailErr;?></span>
-  <br><br>
-  Home Address: <input type="text" name="home_address" value="<?php echo $home_address;?>">
-  <br><br>
-  Gender:
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-  <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-  <span class="error">* <?php echo $genderErr;?></span>
-  <br><br>
-  Cellphone Number: <input type="number" name="cellphone" value="<?php echo $cellphone;?>">
-  <br><br>
-  Comment: <br><textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
-  <br><br>
-  <input type="submit" name="submit" value="Submit">  
+    <p style="font-size: 30px;"><b>Personal Information</b></p>
+      
+      Name: <input type="text" name="name">
+      <span class="error">* <?php echo $nameErr;?></span>
+      <br><br>
+      Nickname: <input type="text" name="nickname">
+      <span class="error">* <?php echo $nicknameErr;?></span>
+      <br><br>
+      E-mail:
+      <input type="text" name="email">
+      <span class="error">* <?php echo $emailErr;?></span>
+      <br><br>
+      Home Address:
+      <input type="text" name="address">
+      <br><br>
+      Gender:
+      <input type="radio" name="gender" value="female">Female
+      <input type="radio" name="gender" value="male">Male
+      <span class="error">* <?php echo $genderErr;?></span>
+      <br><br>
+      Cellphone Number: <input type="text" name="cellno">
+      <span class="error">* <?php echo $cellnoErr;?></span>
+      <br><br>
+      Comment: <textarea name="comment" rows="5" cols="40"></textarea>
+      <br><br>
+      
+      <input type="submit" name="submit" value="Submit">
 </form>
 
 <?php
-echo "<h2>Your Input:</h2>";
-echo $full_name;
-echo "<br>";
-echo $nickname;
-echo "<br>";
-echo $email;
-echo "<br>";
-echo $home_address;
-echo "<br>";
-echo $gender;
-echo "<br>";
-echo $cellphone;
-echo "<br>";
-echo $comment;
-echo "<br>";
+    echo "<h4>Your Input:</h4>";
+    echo $name;
+    echo "<br>";
+    echo $nickname;
+    echo "<br>";
+    echo $email;
+    echo "<br>";
+    echo $address;
+    echo "<br>";
+    echo $gender;
+    echo "<br>";
+    echo $cellno;
+    echo "<br>";
+    echo $comment;
+    echo "<br>";
 
 ?>
 </div>
 
 <!--second layer-->
-  <div style = "background-color: #1C140D; width: 1366px; height: 50px; position: absolute; top: 1500px; left: 0px;">
+  <div style = "background-color: #1C140D; width: 1366px; height: 50px; position: absolute; top: 1800px; left: 0px;">
             <div style="position: absolute; top: 10px; left:10px;color: white; font-size: 13px;"><i>Web Programming: Exercise 2</i></div>
             <div style="position: absolute; top: 30px; left:600px;color: white; font-size: 13px;"><i>Copyright 2016. Reinan Meer.</i></div>
   </div>

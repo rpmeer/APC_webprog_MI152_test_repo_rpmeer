@@ -58,7 +58,7 @@
                 Went to <i>Escuela De San Lorenzo Ruiz</i>
           </div>
           <div>
-                <img src="assets/home.png" style="width: 20px; height: 20px; position: absolute; top: 263px; left: 20px;">
+                <img src="<?php echo base_url('assets/home.png');?>" style="width: 20px; height: 20px; position: absolute; top: 263px; left: 20px;">
           </div>
           <div style="font-size: 14px; color: black;  position: absolute; left: 45px;top: 265px;">
                 Lives in <i>Paranaque City</i>
@@ -79,7 +79,7 @@
           </div>
           <!--1st-->
           <div style=" position: absolute; top: 30px; left: 30px;">
-                <img src="assets/reading.png" style="width: 60px; height: 60px;">
+                <img src="<?php echo base_url('assets/reading.png');?>" style="width: 60px; height: 60px;">
           </div>
           <div style="background-color: white; width:250px; height: 40px; position: absolute; top: 40px; left: 100px; border-radius: 10px; opacity: 0.5">
                 <div style=" font-size: 17px; position: relative; top: 10px; text-align: center;">
@@ -88,7 +88,7 @@
           </div>
           <!--2nd-->
           <div style=" position: absolute; top: 100px; left: 30px;">
-                <img src="assets/cooking.png" style="width: 60px; height: 60px;">
+                <img src="<?php echo base_url('assets/cooking.png');?>" style="width: 60px; height: 60px;">
           </div>
           <div style="background-color: white; width:250px; height: 40px; position: absolute; top: 110px; left: 100px; border-radius: 10px; opacity: 0.5">
                 <div style=" font-size: 17px; position: relative; top: 10px; text-align: center;">
@@ -98,7 +98,7 @@
 
           <!--3rd-->
           <div style=" position: absolute; top: 170px; left: 30px;">
-                <img src="assets/playing.png" style="width: 60px; height: 60px;">
+                <img src="<?php echo base_url('assets/playing.png');?>" style="width: 60px; height: 60px;">
           </div>
           <div style="background-color: white; width:250px; height: 40px; position: absolute; top: 180px; left: 100px; border-radius: 10px; opacity: 0.5">
                 <div style=" font-size: 17px; position: relative; top: 10px; text-align: center;">
@@ -108,7 +108,7 @@
 
           <!--4th-->
           <div style=" position: absolute; top: 240px; left: 30px;">
-                <img src="assets/watching.png" style="width: 60px; height: 60px;">
+                <img src="<?php echo base_url('assets/watching.png');?>" style="width: 60px; height: 60px;">
           </div>
           <div style="background-color: white; width:250px; height: 40px; position: absolute; top: 250px; left: 100px; border-radius: 10px; opacity: 0.5">
                 <div style=" font-size: 17px; position: relative; top: 10px; text-align: center;">
@@ -120,13 +120,13 @@
     <!--Relationship-->
     <div style="background-color: #CBE86B; width:400px; height: 85px; position: absolute; top: 455px; left: 400px; border-radius: 10px; opacity: 0.5">
           <div>
-                <img src="assets/relationship.png" style="width: 20px; height: 20px; position: absolute; top: 20px; left: 20px;">
+                <img src="a<?php echo base_url('assets/relationship.png');?>" style="width: 20px; height: 20px; position: absolute; top: 20px; left: 20px;">
           </div>
           <div style="font-size: 15px; color: black;  position: absolute; left: 60px;top: 20px;">
                 Single
           </div>
           <div>
-                <img src="assets/birthday.png" style="width: 20px; height: 20px; position: absolute; top: 50px; left: 20px;">
+                <img src="<?php echo base_url('assets/birthday.png');?>" style="width: 20px; height: 20px; position: absolute; top: 50px; left: 20px;">
           </div>
           <div style="font-size: 15px; color: black;  position: absolute; left: 60px;top: 50px;">
                 May 24, 1999
@@ -139,13 +139,13 @@
                 <b>Organizations</b>
           </div>
           <div>
-                <img src="assets/org.png" style="width: 20px; height: 20px; position: absolute; top: 50px; left: 20px;">
+                <img src="<?php echo base_url('assets/org.png');?>" style="width: 20px; height: 20px; position: absolute; top: 50px; left: 20px;">
           </div>
           <div style="font-size: 15px; color: black;  position: absolute; left: 50px;top: 50px;">
                 Vice President for External Affairs at <i>Microsoft Community</i>
           </div>
           <div>
-                <img src="assets/org.png" style="width: 20px; height: 20px; position: absolute; top: 90px; left: 20px;">
+                <img src="<?php echo base_url('assets/org.png');?>" style="width: 20px; height: 20px; position: absolute; top: 90px; left: 20px;">
           </div>
           <div style="font-size: 15px; color: black;  position: absolute; left: 50px;top: 90px;">
                 Marketing and Promotions Associate at <i>Junior Philippine Computer Society</i>
@@ -154,22 +154,22 @@
 
     <!--web-->
     <div style="background-color: white; width:470px; height: 345px; position: absolute; top: 195px; left: 830px; border-radius: 10px; opacity: 0.5;" >
-          <div style=" position: absolute; top: 10px; left: 10px;"><img src="assets/web.png" style="width: 50px; height: 50px;"></div>
+          <div style=" position: absolute; top: 10px; left: 10px;"><img src="<?php echo base_url('assets/web.png');?>" style="width: 50px; height: 50px;"></div>
           <div style="position: absolute; top: 20px;left: 70px; font-size: 18px;"><b>Websites</b></div>
 
-          <div style=" position: absolute; top: 70px; left: 60px;"><a href="https://www.facebook.com"><img src="assets/facebook.png" style="width: 90px; height: 90px;"></a></div>
+          <div style=" position: absolute; top: 70px; left: 60px;"><a href="https://www.facebook.com"><img src="a<?php echo base_url('assets/facebook.png');?>" style="width: 90px; height: 90px;"></a></div>
           <div style=" position: absolute; top: 160px; left: 65px; font-size: 18px;  color: black;">Facebook</div>
 
-          <div style=" position: absolute; top: 70px; left: 200px;"><a href="https://www.twitter.com"><img src="assets/twitter.png" style="width: 90px; height: 90px;"></a></div>
+          <div style=" position: absolute; top: 70px; left: 200px;"><a href="https://www.twitter.com"><img src="<?php echo base_url('assets/twitter.png');?>" style="width: 90px; height: 90px;"></a></div>
           <div style=" position: absolute; top: 160px; left: 220px; font-size: 18px;  color: black;">Twitter</div>
 
-          <div style=" position: absolute; top: 70px; left: 340px;"><a href="https://www.youtube.com"><img src="assets/youtube.png" style="width: 90px; height: 90px;"></a></div>
+          <div style=" position: absolute; top: 70px; left: 340px;"><a href="https://www.youtube.com"><img src="<?php echo base_url('assets/youtube.png');?>" style="width: 90px; height: 90px;"></a></div>
           <div style=" position: absolute; top: 160px; left: 355px; font-size: 18px;  color: black;">Youtube</div>
 
-          <div style=" position: absolute; top: 200px; left: 140px;"><a href="https://www.pinterest.com"><img src="assets/pinterest.png" style="width: 90px; height: 90px;"></a></div>
+          <div style=" position: absolute; top: 200px; left: 140px;"><a href="https://www.pinterest.com"><img src="<?php echo base_url('assets/pinterest.png');?>" style="width: 90px; height: 90px;"></a></div>
           <div style=" position: absolute; top: 290px; left: 150px; font-size: 18px;  color: black;">Pinterest</div>
           
-          <div style=" position: absolute; top: 200px; left: 300px;"><a href="https://www.linkedin.com"><img src="assets/linkedin.png" style="width: 90px; height: 90px;"></a></div>
+          <div style=" position: absolute; top: 200px; left: 300px;"><a href="https://www.linkedin.com"><img src="<?php echo base_url('assets/linkedin.png');?>" style="width: 90px; height: 90px;"></a></div>
           <div style=" position: absolute; top: 290px; left: 310px; font-size: 18px; color: black;">Linkedin</div>
     </div>
 

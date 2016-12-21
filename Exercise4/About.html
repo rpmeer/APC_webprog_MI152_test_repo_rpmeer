@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+<body id="main">
+
+<!--nav-->
+<div id="mySidenav" class="sidenav">
+  <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+  
+  <a href="HomePage.html" style="position: absolute; top: 120px; left: 50px;"><img src="house.png" style="height: 40px; width: 40px; position: absolute; top: -40px; left: 15px;">Home</a>
+  <a href="About.html" style="position: absolute; top: 250px; left: 50px;"><img src="me.png" style="height: 40px; width: 40px; position: absolute; top: -40px; left: 15px;">About</a>
+</div>
+
+<!--first layer-->
+<div style = "background-color: #F2E9E1; width: 1365px; height: 585px; margin: 0px; position: absolute; top: 0px; left: 0px;">
+  <div id="main">
+     <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+  </div>
+
+  <div style="position: absolute; top: 30px; left: 300px; font-size: 30px;"><b>Trivia Questions</b></div>
+
+  <form>
+  <div style="position: absolute; top: 80px; left: 300px; font-size: 20px;">#1: What is my favorite study place?</div>
+  <input type="button" class="button button1" onclick="info1()" value="Answer" style="position: absolute;top: 120px;left: 320px"/>
+  <p id=answer1 style="position: absolute; top: 120px; left: 400px; font-size: 16px;"></p>
+  </form>
+
+  <form>
+  <div style="position: absolute; top: 170px; left: 300px; font-size: 20px;">#2: What is my favorite italian dish?</div>
+  <input  type="button" class="button button1" onclick="info2()" value="Answer" style="position: absolute;top: 210px;left: 320px"/>
+  <p id=answer2 style="position: absolute; top: 210px; left: 400px; font-size: 16px;"></p>
+  </form>
+
+  <form>
+  <div style="position: absolute; top: 260px; left: 300px; font-size: 20px;">#3: What books I'm interested at?</div>
+  <input  type="button" class="button button1" onclick="info3()" value="Answer" style="position: absolute;top: 300px;left: 320px"/>
+  <p id=answer3 style="position: absolute; top: 300px; left: 400px; font-size: 16px;"></p>
+  </form>
+
+  <form>
+  <div style="position: absolute; top: 350px; left: 300px; font-size: 20px;">#4: What hobbies I'm usually do during my free time?</div>
+  <input  type="button" class="button button1" onclick="info4()" value="Answer" style="position: absolute;top: 390px;left: 320px"/>
+  <p id=answer4 style="position: absolute; top: 390px; left: 400px; font-size: 16px;"></p>
+  </form>
+
+  <form>
+  <div style="position: absolute; top: 440px; left: 300px; font-size: 20px;">#5: What is my favorite sport?</div>
+  <input  type="button" class="button button1" onclick="info5()" value="Answer" style="position: absolute;top: 480px;left: 320px"/>
+  <p id=answer5 style="position: absolute; top: 480px; left: 400px; font-size: 16px;"></p>
+  </form>
+
+
+
+  
+
+</div>
+
+ <!--second layer-->
+<div style = "background-color: #1C140D; width: 1366px; height: 50px; position: absolute; top: 585px; left: 0px;">
+            <div style="position: absolute; top: 10px; left:10px;color: white; font-size: 13px;"><i>Web Programming: Exercise 2</i></div>
+            <div style="position: absolute; top: 30px; left:600px;color: white; font-size: 13px;"><i>Copyright 2016. Reinan Meer.</i></div>
+</div>
+
+        
+<script>
+  function openNav() {
+      document.getElementById("mySidenav").style.width = "190px";
+      document.getElementById("main").style.marginLeft = "190px";
+  }
+
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+  }
+
+  function  info1(){
+  var answer1 = "I love visiting different coffee shops and have a sip of their mouthwatering coffee";
+  document.getElementById("answer1").innerHTML = answer1;
+  
+  }
+
+  function  info2(){
+  var answer2 = "Puttanesca and pesto";
+  document.getElementById("answer2").innerHTML = answer2;
+  
+  }
+
+  function  info3(){
+  var answer3 = "Any adventure and scifi novels are the best";
+  document.getElementById("answer3").innerHTML = answer3;
+  
+  }
+
+  function  info4(){
+  var answer4 = "Appreciating architectural designs in different places esp in restaurants and visiting the church";
+  document.getElementById("answer4").innerHTML = answer4;
+  
+  }
+
+  function  info5(){
+  var answer5 = "I love playing badminton";
+  document.getElementById("answer5").innerHTML = answer5;
+  
+  }
+
+
+
+  
+</script>
+     
+</body>
+</html> 

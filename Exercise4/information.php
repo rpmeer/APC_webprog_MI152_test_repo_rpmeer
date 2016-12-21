@@ -87,7 +87,7 @@
       <p style="font-size: 30px;"><b>Personal Information</b></p>
       <p style="color: red;">* required field</p>
       Name: <input type="text" name="name">
-      <span class="error" style="color: red;">* <?php echo $nameErr;?></span>
+      <span class="error">* <?php echo $nameErr;?></span>
       <br><br>
       Nickname: <input type="text" name="nickname">
       <span class="error">* <?php echo $nicknameErr;?></span>
@@ -119,8 +119,10 @@
     <?php
     
     echo "<h4>Your Input:</h4>";
+    echo "<p><i>Name:</i></p>";
     echo $name;
-    echo "<br>";
+    echo "<p><i>Nickname:</i></p>";
+
     echo $nickname;
     echo "<br>";
     echo $email;

@@ -12,19 +12,19 @@
 
 	<tr>
 		<td>First Name:</td>
-		<td><input type="text" name="title" class="form-control"/></td>
+		<td><input type="text" name="fname" class="form-control"/></td>
 	</tr>
 	<tr>
 		<td>Last Name</td>
-		<td><input type="text" name="author" class="form-control"/></td>
+		<td><input type="text" name="lname" class="form-control"/></td>
 	</tr>
 	<tr>
 		<td>E-mail</td>
-		<td><input type="text" name="name" class="form-control"/></td>
+		<td><input type="text" name="email" class="form-control"/></td>
 	</tr>
 	<tr>
 		<td>Contact Number</td>
-		<td><input type="text" name="copy" class="form-control"/></td>
+		<td><input type="text" name="contact" class="form-control"/></td>
 	</tr>
 	<tr>
 		<td>&nbsp;</td>
@@ -36,13 +36,13 @@ if (isset($_POST['submit']))
 	{	   
 	include 'db.php';
 	
-			 		$title=$_POST['title'] ;
-					$author= $_POST['author'] ;					
-					$name=$_POST['name'] ;
-					$copy=$_POST['copy'] ;
+			 		$fname=$_POST['fname'] ;
+					$lname= $_POST['lname'] ;					
+					$email=$_POST['email'] ;
+					$contact=$_POST['contact'] ;
 												
-		 mysql_query("INSERT INTO `example`(Title,Author,PublisherName,CopyrightYear) 
-		 VALUES ('$title','$author','$name','$copy')"); 
+		 mysql_query("INSERT INTO `example`(fname,lname,email,contact) 
+		 VALUES ('$fname','$lname','$email','$contact')"); 
 				
 				
 	        }
@@ -58,15 +58,15 @@ if (isset($_POST['submit']))
 			
 			while($test = mysql_fetch_array($result))
 			{
-				$id = $test['BookID'];	
+				$id = $test['id'];	
 				echo "<tr align='center'>";	
-				echo"<td><font color='black'>" .$test['BookID']."</font></td>";
-				echo"<td><font color='black'>" .$test['Title']."</font></td>";
-				echo"<td><font color='black'>". $test['Author']. "</font></td>";
-				echo"<td><font color='black'>". $test['PublisherName']. "</font></td>";
-				echo"<td><font color='black'>". $test['CopyrightYear']. "</font></td>";	
-				echo"<td> <a href ='view.php?BookID=$id'>Edit</a>";
-				echo"<td> <a href ='del.php?BookID=$id'><center>Delete</center></a>";
+				echo"<td><font color='black'>" .$test['id']."</font></td>";
+				echo"<td><font color='black'>" .$test['fname']."</font></td>";
+				echo"<td><font color='black'>". $test['lname']. "</font></td>";
+				echo"<td><font color='black'>". $test['email']. "</font></td>";
+				echo"<td><font color='black'>". $test['contatc']. "</font></td>";	
+				echo"<td> <a href ='view.php?id=$id'>Edit</a>";
+				echo"<td> <a href ='del.php?id=$id'><center>Delete</center></a>";
 									
 				echo "</tr>";
 			}

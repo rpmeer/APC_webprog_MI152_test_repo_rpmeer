@@ -52,7 +52,7 @@ mysql_close($conn);
 		<td><input type="text" name="lname" value="<?php echo $lname ?>"/></td>
 	</tr>
 	<tr>
-<!--mail-->
+<!--email-->
 
 		<td>E-mail</td>
 		<td><input type="text" name="email" value="<?php echo $email ?>"/></td>

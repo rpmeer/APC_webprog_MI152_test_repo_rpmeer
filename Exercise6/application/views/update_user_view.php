@@ -56,7 +56,7 @@ if($this->input->post('is_submitted'))
 <!--comment-->
     <label for="comment">Comment</label>
     <input type="input" name="comment" value="<?php echo $comment; ?>"/><br />
-
+<!--button-->
     <input type="submit" name="submit" value="Update User" />
 
 <?php echo form_close(); ?>

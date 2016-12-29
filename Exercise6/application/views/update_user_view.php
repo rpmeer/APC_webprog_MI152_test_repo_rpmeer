@@ -50,7 +50,7 @@ if($this->input->post('is_submitted'))
     <option>Female</option>   
     </select>
     <br />
-
+<!--contact-->
     <label for="phoneNum">Phone No.</label>
     <input type="input" name="phoneNum" value="<?php echo $phoneNum; ?>"/><br />
 

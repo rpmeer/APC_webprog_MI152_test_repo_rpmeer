@@ -53,7 +53,7 @@ if($this->input->post('is_submitted'))
 <!--contact-->
     <label for="phoneNum">Phone No.</label>
     <input type="input" name="phoneNum" value="<?php echo $phoneNum; ?>"/><br />
-
+<!--comment-->
     <label for="comment">Comment</label>
     <input type="input" name="comment" value="<?php echo $comment; ?>"/><br />
 

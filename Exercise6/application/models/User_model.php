@@ -32,7 +32,7 @@ class User_model extends CI_Model
     }
     
 
-    function find($user_id) //this is for find record id->product
+    function find($user_id) 
     { 
         $code = $this->db->where('user_id',$user_id)
                         ->limit(1)

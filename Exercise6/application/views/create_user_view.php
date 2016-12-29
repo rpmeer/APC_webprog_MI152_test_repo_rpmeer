@@ -27,7 +27,7 @@
     </select>
     <br />
 
-    <label for="phoneNum">Cellphone No.</label>
+    <label for="phoneNum">Phone No.</label>
     <input type="input" name="phoneNum" /><br />
 
     <label for="comment">Comment</label>

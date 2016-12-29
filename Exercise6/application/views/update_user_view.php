@@ -33,7 +33,7 @@ if($this->input->post('is_submitted'))
 <!--Name-->
     <label for="fullname">Full Name</label>
     <input type="input" name="fullname" value="<?php echo $fullname; ?>" /><br />
-
+<!--Nickname-->
     <label for="nickname">Nickname</label>
     <input type="input" name="nickname" value="<?php echo $nickname; ?>" /><br />
 

@@ -42,7 +42,7 @@ if($this->input->post('is_submitted'))
 <!--add-->
     <label for="address">Address</label>
     <input type="input" name="address" value="<?php echo $address; ?>" /><br />
-
+<!--gen-->
     <label for="gender">Gender</label>
     <select type="text" name="gender" value="<?php echo $gender; ?>">
     <option value="">Choose your gender</option>

@@ -39,7 +39,7 @@ if($this->input->post('is_submitted'))
 <!--email-->
     <label for="email">Email Address</label>
     <input type="input" name="email" value="<?php echo $email; ?>" /><br />
-
+<!--add-->
     <label for="address">Address</label>
     <input type="input" name="address" value="<?php echo $address; ?>" /><br />
 

@@ -32,7 +32,7 @@
     </div>
 
     <!--About Me-->
-    <div style="background-color: ; width:300px; height: 300px; position: absolute; top: 240px; left: 70px; ">
+    <div style="background-color: #CBE86B; width:300px; height: 300px; position: absolute; top: 240px; left: 70px; ">
           <div style="font-size: 28px; color: black; text-align: center; position: relative; top: 20px;">
                 <b>Reinan P. Meer</b>
           </div>

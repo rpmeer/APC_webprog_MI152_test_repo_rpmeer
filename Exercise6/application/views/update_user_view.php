@@ -36,7 +36,7 @@ if($this->input->post('is_submitted'))
 <!--Nickname-->
     <label for="nickname">Nickname</label>
     <input type="input" name="nickname" value="<?php echo $nickname; ?>" /><br />
-
+<!--email-->
     <label for="email">Email Address</label>
     <input type="input" name="email" value="<?php echo $email; ?>" /><br />
 

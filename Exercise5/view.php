@@ -39,10 +39,14 @@ mysql_close($conn);
 <form method="post">
 <table>
 <!--form-->
+<!--name-->
+
 	<tr>
 		<td>First Name:</td>
 		<td><input type="text" name="fname" value="<?php echo $fname ?>"/></td>
 	</tr>
+<!---->
+
 	<tr>
 		<td>Last Name:</td>
 		<td><input type="text" name="lname" value="<?php echo $lname ?>"/></td>

@@ -57,6 +57,8 @@ mysql_close($conn);
 		<td>E-mail</td>
 		<td><input type="text" name="email" value="<?php echo $email ?>"/></td>
 	</tr>
+<!--contact-->
+
 	<tr>
 		<td>Contact</td>
 		<td><input type="text" name="contact" value="<?php echo $contact ?>"/></td>

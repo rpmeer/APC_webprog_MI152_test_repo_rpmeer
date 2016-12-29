@@ -38,6 +38,7 @@ mysql_close($conn);
 <body>
 <form method="post">
 <table>
+<!--form-->
 	<tr>
 		<td>First Name:</td>
 		<td><input type="text" name="fname" value="<?php echo $fname ?>"/></td>

@@ -32,7 +32,7 @@ mysql_close($conn);
 <!DOCTYPE html>
 <html>
 <head>
-<title>phptaab.blogspot.in</title>
+<title>Form</title>
 </head>
 
 <body>

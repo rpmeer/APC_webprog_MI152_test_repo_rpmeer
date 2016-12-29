@@ -63,6 +63,8 @@ mysql_close($conn);
 		<td>Contact</td>
 		<td><input type="text" name="contact" value="<?php echo $contact ?>"/></td>
 	</tr>
+<!--submit-->
+
 	<tr>
 		<td>&nbsp;</td>
 		<td><input type="submit" name="save" value="save" /></td>

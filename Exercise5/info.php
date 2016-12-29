@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My HomePage</title>
+    <title>Form</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
 
 </head>

@@ -30,6 +30,7 @@ if($this->input->post('is_submitted'))
 <h2>Personal Information</h2>
 <?php echo validation_errors();?>
 <?php echo form_open('Users/edit/'.$user_id); ?>
+<!--Name-->
     <label for="fullname">Full Name</label>
     <input type="input" name="fullname" value="<?php echo $fullname; ?>" /><br />
 

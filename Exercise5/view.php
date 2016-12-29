@@ -45,7 +45,7 @@ mysql_close($conn);
 		<td>First Name:</td>
 		<td><input type="text" name="fname" value="<?php echo $fname ?>"/></td>
 	</tr>
-<!---->
+<!--name-->
 
 	<tr>
 		<td>Last Name:</td>
